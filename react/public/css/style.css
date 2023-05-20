@@ -1,0 +1,209 @@
+/* * {
+    outline: 1px dotted red;
+} */
+
+/* Header */
+/* -------------------------------------- */
+.header{
+    color:whitesmoke;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.nav-items {
+    display: flex;
+    margin-top: 15px;
+    padding: 75px 20px 20px 0px;
+    gap: 10%;
+    justify-content: end;
+    list-style-type: none;
+}
+
+.nav-items a {
+    color: whitesmoke;
+    text-decoration:none;
+    
+}
+
+.nav-items a:hover {
+    color: rgb(144, 115, 115);
+    
+}
+
+.nav-items a:active {
+    color: rgb(144, 115, 115);
+    
+}
+
+/* Cart */
+/* ---------------------------------------------- */
+.top-icons{
+    margin-left: 75%;
+}
+
+/* Main Content */
+/* ---------------------------------------------- */
+.FeaturedSteak{
+    display: flex;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Cards */
+/* ---------------------------------------------- */
+.card{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#steakGroup1{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+#steakGroup2{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.btn {
+    text-align: center;
+}
+
+/* Footer */
+/* ---------------------------------------------- */
+footer {
+    color: whitesmoke;
+    opacity: 50%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+/* Media Query Breakpoints for Responsive Web Design */
+/* ---------------------------------------------- */
+@media (max-width: 991px) {
+    .nav-items {
+      display: block; /* or any other display value you want to use */
+    }
+}
+@media (max-width: 912px) {
+    .nav-items {
+      display: block; /* or any other display value you want to use */
+    }
+}
+@media (max-width: 768px) {
+    .nav-items {
+      display: block; /* or any other display value you want to use */
+    }
+}
+@media (max-width: 768px) {
+    .nav-items {
+      display: block; /* or any other display value you want to use */
+      margin-left: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+      display: block; /* or any other display value you want to use */
+      margin-left: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .top-icons {
+      margin-left: 35%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .logo {
+        width: 300px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 761px) {
+    .logo {
+        width: 300px;
+        margin-left: 18%;
+    }
+}
+
+@media (max-width: 767px) {
+    #steakGroup1,#steakGroup2 {
+        display: block; /* or any other display value you want to use */
+        margin-left: 20%;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .logo {
+        width: 300px;
+        margin-left: 6%;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .top-icons {
+        display: flex;
+        padding-right: 35px;
+    }
+}
+
+
+/* Steak App CSS */
+body{
+    background-color: rgb(47, 46, 46);
+}
+
+/* form {
+    background-color: rgb(47, 46, 46);
+} */
+
+label {
+    color: whitesmoke;
+}
+
+#steakWelcome{
+    color: whitesmoke;
+    align-items: center;
+}
+
+#steakCardsTitle{
+    color:whitesmoke;
+}
+.card {
+    width: 600px;
+}
+
+.card-body {
+    width: 400px;
+}
+
+#headerTitle {
+    color:whitesmoke;
+    padding-top: 15px;
+}
+
+#firstName {
+    width: 300px;
+}
+
+#lastName {
+    width: 300px;
+}
+
+#copyRight {
+    color:whitesmoke;
+}
+
