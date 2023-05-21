@@ -11,34 +11,34 @@ const daoCommon = {
             `SELECT * FROM ${table};`,
             (error, rows) => {
                 if(!error) {
-                    if(rows.length === 1) {
+                    if(rows.length ===1) {
                         res.json(...rows)
-                    } else {
+                    }else {
                         res.json(rows)
                     }
-                } else {
-                    console.log(' DAO ERROR ', error)
+                }else {
+                    console.log('DAO ERROR', error)
                 }
             }
-            )
-        },
+        )
+    },
         
     // Find By ID
     // --------------------------------------------------
-    findById: (res, table, id)=> {
+    findById: (res, table, id) => {
         conn.execute(
             `SELECT * FROM ${table} WHERE ${table}_id = ?;`,
             [id],
             (error, rows) => {
                 if(!error) {
-                    if(rows.length === 1) {
+                    if(rows.length ===1) {
                         res.json(...rows)
-                    } else {
+                    }else {
                         res.json(rows)
                     }
-                } else {
-                    console.log( ' DAO ERROR ', error)
-                } 
+                }else {
+                    console.log(' DAO ERROR ', error)
+                }
             }
         )
     },
@@ -47,7 +47,7 @@ const daoCommon = {
     // --------------------------------------------------
     countAll: (res, table) => {
         conn.execute(
-            `SELECT COUNT(*) count FROM ${table};`,
+            `SELECT COUNT(*) FROM ${table};`,
             (error, rows) => {
                 if(!error) {
                     if(rows.length === 1) {

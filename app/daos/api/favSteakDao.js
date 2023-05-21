@@ -22,7 +22,7 @@ const favSteakDao = {
             const values = Object.values(req.body)
             
             conn.execute(
-                `INSERT INTO favSteak SET${fields.join(' =?,')} = ?;`,
+                `INSERT INTO steak SET${fields.join(' =?,')} = ?;`,
                 values,
                 (error, dbres) => {
                     if(!error) {

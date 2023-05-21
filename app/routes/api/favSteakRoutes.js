@@ -9,9 +9,9 @@ const { favSteakDao: dao } = require('../../daos/dao')
 
 // localhost:3000/favSteak/api
 // --------------------------------------
-router.get('api', (req, res)=> {
+router.get('/api', (req, res)=> {
     dao.findAll(res, dao.table)
-})
+});
 
 
 module.exports = router;
