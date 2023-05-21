@@ -1,3 +1,5 @@
+// Access and Configure Access Database
+// ----------------------------------------------------
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
