@@ -8,6 +8,24 @@ const favSteakDao  = {
     ...require('./api/favSteakDao')
 }
 
+const mealDao  = {
+    ...daoCommon,
+    ...require('./api/mealDao')
+}
+
+const customerDao  = {
+    ...daoCommon,
+    ...require('./api/customerDao')
+}
+
+const itemDao  = {
+    ...daoCommon,
+    ...require('./api/itemDao')
+}
+
 module.exports = {
-    favSteakDao
+    favSteakDao,
+    mealDao,
+    customerDao,
+    itemDao
 }

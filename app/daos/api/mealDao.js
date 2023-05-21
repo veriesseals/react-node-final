@@ -7,8 +7,8 @@
 const conn = require('../../config/dbconfig')
 
 
-const favSteakDao = {
-    table: 'favSteak',
+const mealDao = {
+    table: 'meal',
     // Create Method so we can post with a form
     // -------------------------------------------------
     create: (req, res) => {
@@ -22,7 +22,7 @@ const favSteakDao = {
             const values = Object.values(req.body)
             
             conn.execute(
-                `INSERT INTO favSteak SET${fields.join(' =?,')} = ?;`,
+                `INSERT INTO meal SET${fields.join(' =?,')} = ?;`,
                 values,
                 (error, dbres) => {
                     if(!error) {
@@ -53,7 +53,7 @@ const favSteakDao = {
             const values = Object.values(req.body)
 
             conn.execute (
-                `UPDATE favSteak SET ${fields.join(' =?, ')} = WHERE favSteak_id = ?;`,
+                `UPDATE meal SET ${fields.join(' =?, ')} = WHERE favSteak_id = ?;`,
                 [...values, req.params.id],
                 (error, dbres) => {
                     if(!error) {
@@ -68,11 +68,11 @@ const favSteakDao = {
         }
     },
 
-    // Find By Steak Query
+    // Find By Meal Query
     // -------------------------------------------------
-    findBySteak: (res, steak) => {
+    findByMeal: (res, steak) => {
         conn.execute(
-            'SELECT * FROM favSteak WHERE steak = ?;',
+            'SELECT * FROM meal WHERE steak = ?;',
             [steak],
             (error, rows) => {
                 if(!error){
@@ -91,4 +91,4 @@ const favSteakDao = {
 }
 
 
-module.exports = favSteakDao;
+module.exports = mealDao;

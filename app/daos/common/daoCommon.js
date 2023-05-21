@@ -43,11 +43,11 @@ const daoCommon = {
         )
     },
 
-    // Find By ID
+    // Count All
     // --------------------------------------------------
     countAll: (res, table) => {
         conn.execute(
-            `SELECT COUNT(*) FROM ${table};`,
+            `SELECT COUNT(*) count FROM ${table};`,
             (error, rows) => {
                 if(!error) {
                     if(rows.length === 1) {
