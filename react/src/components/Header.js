@@ -17,9 +17,9 @@ function Header() {
                     <div className="col-md-4">
                         <nav className="right-nav">
                             <ul className="nav-items">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">All Favorite Steaks</a></li>
-                                <li><a href="#">About</a></li>
+                                {/* <li><a href="#">Home</a></li> */}
+                                <li><a href="http://localhost:3002/favSteak/api">All Favorite Steaks</a></li>
+                                <li><a href="#">About the Developer</a></li>
                             </ul>
                         </nav>
                     </div>
