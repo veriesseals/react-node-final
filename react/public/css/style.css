@@ -166,10 +166,6 @@ body{
     background-color: rgb(47, 46, 46);
 }
 
-/* form {
-    background-color: rgb(47, 46, 46);
-} */
-
 label {
     color: whitesmoke;
 }
@@ -179,31 +175,24 @@ label {
     align-items: center;
 }
 
-#steakCardsTitle{
-    color:whitesmoke;
-}
-.card {
-    width: 600px;
-}
-
-.card-body {
-    width: 400px;
-}
-
-#headerTitle {
-    color:whitesmoke;
-    padding-top: 15px;
-}
-
-#firstName {
-    width: 300px;
-}
-
-#lastName {
-    width: 300px;
-}
-
 #copyRight {
     color:whitesmoke;
+}
+
+/* New Form */
+
+.title {
+    color: whitesmoke
+}
+
+
+.nameGroup{
+    display: flex;
+    gap: 20px;
+}
+
+.gatherInfoGroup{
+    display: flex;
+    gap: 20px;
 }
 

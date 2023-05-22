@@ -1,111 +1,121 @@
-export const SteakMealInput = () => {
-    // Return Steak Card to User
-    // ------------------------------------------------------------
-    class favSteak {
-        constructor() {
-            this.favChoice = {
-                fName: '',
-                lName: '',
-                email: '',
-                restuarant:'',
-                steak:'',
-                image:''
-                
-                
-            }
-        }
-    
-        // ----------------------------------------------------------
-        // Submit Button
-    
-        button(){
-            let button = document.getElementById('submitBtn');
-            button.addEventListener('click', this.displayData);
-            // button.addEventListener('click', () => console.log('clicked'));
-            
-        };
-    
-    
-        displayData(e){
-            e.preventDefault();
-                let firstName = document.getElementById('firstName').value;
-                let lastName = document.getElementById('lastName').value;
-                let steakLoversEmail = document.getElementById('steakLoversEmail').value;
-                let restuarant = document.getElementById('restuarant').value;
-                let steak = document.getElementById('steak').value;
-                let inputImage = document.getElementById('inputImage').value;
-    
-    
-                this.favChoice = {
-                    fName: firstName,
-                    lName: lastName,
-                    email: steakLoversEmail,
-                    restuarant:restuarant,
-                    steak:steak,
-                    image: inputImage
-                }
-    
-            console.log(this.favChoice);
-    
-            let steakCardDisplay = document.getElementById('steakCardDisplay');
-            steakCardDisplay.innerHTML += `
-                        <div class="card mb-3">
-                                <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="${this.favChoice.image}" class="img-fluid rounded-start" alt="...">
+import React from "react";
+import axios from "axios";
+import {useState} from 'react';
+// import { response } from "express";
+
+
+function SteakMealInput() {
+    // This will be a state to handle the objects.
+    // -----------------------------------------------
+    const [post, setPost] = useState({
+        fName: '',
+        lName:'',
+        email:'',
+        restuarant:'',
+        steak:'',
+        image:''
+    })
+
+    // This will handle the data from the inputs
+    // -----------------------------------------------
+    const handleInput = (event) => {
+        setPost({...post, [event.target.name]: event.target.value})
+
+    }
+
+    // This will handle the submit button
+    // -----------------------------------------------
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log(post)
+        // Create a PORT request using Axios and Pass data from the post object
+        axios.post('http://localhost:3002/favSteak/api/create', post)
+        // Return Response
+        .then(response => console.log(response))
+        // If not a Respnse return an error
+        .catch(err => console.log(err))
+    }
+
+    return (
+        <div className="wrapper">
+            <div className="container">
+            <div className="row">
+                <form onSubmit={handleSubmit}>
+                    {/* Inputs */}
+                    {/* nameGroup */}
+                    <div className="container nameGroup">
+                        <div className="col-md-4">
+                                {/* First Name */}
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="fName">First Name</span>
+                                    <input type="text" class="form-control" onChange={handleInput} name="fName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                    <h2 class="card-title">${this.favChoice.steak}</h2>
-                                    <p class="card-text">${'First Name: ' + this.favChoice.fName}</p>
-                                    <p class="card-text">${'Last Name: ' + this.favChoice.lName}</p>
-                                    <p class="card-text">${'Email: ' + this.favChoice.email}</p>
-                                    <p class="card-text">${this.favChoice.restuarant + ' is my favorite Top 10 Steak Restuarant!'}</p>
-                                    </div>
+                        </div>
+                        <div className="col-md-4">
+                                {/* Last Name */}
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="lName">Last Name</span>
+                                    <input type="text" class="form-control" onChange={handleInput} name="lName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
                                 </div>
+                        </div>
+                    </div>
+                        {/* ------------------------------------------- */}
+                    {/* Gather Info Group */}
+                    <div className="container">
+                        <div className="gatherInfoGroup">
+                            <div className="col-md-4">
+                                {/* Email */}
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="email" class="form-control" onChange={handleInput} name="email" id="email" placeholder="Enter your email name@example.com"/>
                                 </div>
                             </div>
-                    `
-        }
-    }
-    
-    let action = new favSteak();
-    action.button();
-    
-    
-    
-    // ------------------------------------------------------------
-    
-    // const [firstName, setFirstName] = useState('');
-    // const [lastName, setLastName] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [restuarant, setRestuarant] = useState('');
-    // const [steak, setSteak] = useState('');
-    // const [image, setImage] = useState('');
-    
-    
-    // const handleSubmit = async (e) => {
-    // e.preventDefault();
-    
-    // const data = {
-    //     firstName,
-    //     lastName,
-    //     email,
-    //     restuarant,
-    //     steak,
-    //     image
-    // };
-    
-    // try {
-    //     const response = await axios.post('/api/favSteak', data); // Replace '/api/submit' with your actual server endpoint
-    //     setSubmittedData(response.data);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // };
+                            <div className="col-md-4">
+                            {/* Restuarant */}
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="restuarant">Favorite Restuarant</span>
+                                    <input type="text" class="form-control" onChange={handleInput} name="restuarant" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                {/* Favorite Steak */}
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="steak">Favorite Steak</span>
+                                    <input type="text" class="form-control" onChange={handleInput} name="steak" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    
-};
+                    <div className="row">
+                    <div className="container">
+                        <div className="col">
+                            {/* Image URL */}
+                            <div class="input-group input-group-sm mb-3">
+                                <span class="input-group-text" id="imageSub">Submit an image of your favorite Steak</span>
+                                <input type="text" class="form-control" onChange={handleInput} name="image" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                        {/* Button */}
+                        <button className="btn btn-primary">Submit</button>
+
+                    
+                    
+
+                </form>
+
+            </div>
+            </div>
+        </div>
+    )
+}
+
+export default SteakMealInput;
+
+
+// API END POINT http://localhost:3002/favSteak/api
 
 
 

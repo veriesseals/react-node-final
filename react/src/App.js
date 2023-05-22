@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import MainContent from  "./components/MainContent";
-// import SteakMealInput from './components/SteakMealInput';
+import SteakMealInput from './components/SteakMealInput';
 import Footer from "./components/Footer";
 
 
@@ -11,7 +11,7 @@ function App() {
         <div>
             <Header />
             <MainContent />
-            {/* <SteakMealInput /> */}
+            <SteakMealInput />
             <Footer />
         </div>
     )
