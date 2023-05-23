@@ -56,27 +56,7 @@
     border-bottom-right-radius: 5px;
 }
 
-/* Cards */
-/* ---------------------------------------------- */
-.card{
-    width: 200px;
-    margin-bottom: 10px;
-}
 
-#steakGroup1{
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-}
-#steakGroup2{
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: space-between;
-}
-
-.btn {
-    text-align: center;
-}
 
 /* Footer */
 /* ---------------------------------------------- */
@@ -87,6 +67,66 @@ footer {
     padding-bottom: 20px;
 }
 
+
+/* Steak App CSS */
+body{
+    background-color: rgb(47, 46, 46);
+}
+
+label {
+    color: whitesmoke;
+}
+
+#steakWelcome{
+    color: whitesmoke;
+    align-items: center;
+}
+#steakHook{
+    color: whitesmoke;
+    align-items: center;
+}
+
+#copyRight {
+    color:whitesmoke;
+}
+
+/* New Form */
+
+.title {
+    color: whitesmoke
+}
+
+
+.nameGroup{
+    display: flex;
+    gap: 20px;
+}
+
+.gatherInfoGroup{
+    display: flex;
+    gap: 20px;
+}
+
+
+/* About Page */
+
+.aboutPage{
+    background-color: rgb(47, 46, 46);
+
+}
+
+.ecommBioHeader{
+    color: whitesmoke;
+    padding: 5%;
+    
+}
+
+.ecommBio {
+    color: whitesmoke;
+    
+}
+
+
 /* Media Query Breakpoints for Responsive Web Design */
 /* ---------------------------------------------- */
 @media (max-width: 991px) {
@@ -94,6 +134,7 @@ footer {
       display: block; /* or any other display value you want to use */
     }
 }
+
 @media (max-width: 912px) {
     .nav-items {
       display: block; /* or any other display value you want to use */
@@ -160,43 +201,18 @@ footer {
     }
 }
 
-
-/* Steak App CSS */
-body{
-    background-color: rgb(47, 46, 46);
-}
-
-label {
-    color: whitesmoke;
-}
-
-#steakWelcome{
-    color: whitesmoke;
-    align-items: center;
-}
-#steakHook{
-    color: whitesmoke;
-    align-items: center;
-}
-
-#copyRight {
-    color:whitesmoke;
-}
-
-/* New Form */
-
-.title {
-    color: whitesmoke
+@media (max-width: 375px) {
+    .nameGroup {
+        display: block; /* or any other display value you want to use */
+        /* padding-right: 35px; */
+    }
 }
 
 
-.nameGroup{
-    display: flex;
-    gap: 20px;
-}
 
-.gatherInfoGroup{
-    display: flex;
-    gap: 20px;
-}
+
+
+
+
+
 

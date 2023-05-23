@@ -5,12 +5,12 @@ function About() {
 
     return (
     <div>
-        <main>
+        <main className='aboutPage'>
             <section class="container">
                 <div class="row">
-                    <section class="container">
+                    <section class="container aboutGroup">
                         <div class="row">
-                            <h1>About E-COMM Steaks:</h1>
+                            <h1 className='ecommBioHeader'>About E-COMM Steaks:</h1>
                             <hr></hr>
                             <p className='ecommBio'>
                             E-COMM Steaks is a leading online steak company that has revolutionized the way people experience and enjoy high-quality steaks. Founded in [year], our mission has been to provide steak lovers with convenient access to premium cuts of meat right at their fingertips. With our user-friendly platform, customers can browse, select, and order the finest steaks from the comfort of their own homes.

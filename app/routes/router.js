@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3002;
 // ---------------------------------------------------------
 router.get('/api', (req, res) => {
     res.json({
-        'All Favorite Steaks': `http://localhost:${PORT}/favSteak/api`,
+        'All Logged Steaks': `http://localhost:${PORT}/favSteak/api`,
         'All Meals': `http://localhost:${PORT}/meal/api`,
         'All Customers': `http://localhost:${PORT}/customer/api`,
         'All Items': `http://localhost:${PORT}/item/api`

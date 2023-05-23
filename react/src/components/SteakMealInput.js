@@ -96,7 +96,7 @@ function SteakMealInput() {
                                 {/* Image URL */}
                                 <div class="input-group input-group-sm mb-3">
                                     <span class="input-group-text" id="imageSub">Submit an image of your favorite Steak</span>
-                                    <input type="text" class="form-control" onChange={handleInput} name="image" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
+                                    <input type="text" class="form-control submitInput imageSub" onChange={handleInput} name="image" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"/>
                                 </div>
                             </div>
                         </div>

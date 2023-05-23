@@ -2,6 +2,7 @@ import React from "react"
 import Logo from "./img/e-comm-steaks-logo.png";
 
 
+
 function Header() {
     return(
         <div className="wrapper">
@@ -18,8 +19,8 @@ function Header() {
                         <nav className="right-nav">
                             <ul className="nav-items">
                                 {/* <li><a href="/">Home</a></li> */}
-                                <li><a href="http://localhost:3002/favSteak/api">Logged Meals</a></li>
-                                <li><a href="./About">About E-Comm Steaks</a></li>
+                                <li><a href="http://localhost:3002/favSteak/api">All Logged Meals Api</a></li>
+                                {/* <li><a href="./About">About E-Comm Steaks</a></li> */}
                             </ul>
                         </nav>
                     </div>
